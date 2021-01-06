@@ -19,6 +19,7 @@ Content-Type: application/json
 Accept: application/json
 
 {
+  "submission_id": 12345,
   "vertices": [
     [0, 0, 0],
     [1, 0, 0],
@@ -37,3 +38,21 @@ Accept: application/json
     
 
 ```
+
+## GET /renderedGarment
+ 
+Requests an image, gif, or video rendering of a garment.
+
+### Params 
+
+file_type, garment_id, etc. Maybe we can have a database table which settings that we can store information like resolution, camera position/angle/calibration data, etc. that we can reference with a settings_id.
+
+### Example 
+
+The HTTP request below asks for a PNG image of garment #12345 (in the previous example, this was a square) after it has been simulated. 
+
+```
+GET /renderedGarment?garment_id=27&file_type=png HTTP/1.1
+Host: https://novoloom.com/simulations
+
+```   
