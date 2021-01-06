@@ -34,9 +34,6 @@ Accept: application/json
     [1, 3]
   ]
 }
-    
-    
-
 ```
 
 ## GET /renderedGarment
@@ -54,5 +51,4 @@ The HTTP request below asks for a PNG image of garment #12345 (in the previous e
 ```
 GET /renderedGarment?garment_id=27&file_type=png HTTP/1.1
 Host: https://novoloom.com/simulations
-
 ```   
